@@ -36,3 +36,16 @@ function calcularPeso() {
 
 var btCalcular = document.getElementById("btCalcular");
 btCalcular.addEventListener("click", calcularPeso)
+
+function limparCampos() {
+    var inNome = document.getElementById("inNome").value = "";
+    var rdMasculino = document.getElementById("rdMasculino").checked = false;
+    var rdFeminino = document.getElementById("rdFeminino").checked = false;
+    var inAltura = document.getElementById("inAltura").value = "";
+    var outSituacao = document.getElementById("outSituacao").textContent = "";
+
+    document.getElementById("inNome").focus();
+}
+
+var btLimpar = document.getElementById("btLimpar");
+btLimpar.addEventListener("click", limparCampos);
