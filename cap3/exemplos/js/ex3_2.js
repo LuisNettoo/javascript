@@ -38,6 +38,7 @@ var btCalcular = document.getElementById("btCalcular");
 btCalcular.addEventListener("click", calcularPeso)
 
 function limparCampos() {
+    // Limpa todos os valores nos campos do HTML
     var inNome = document.getElementById("inNome").value = "";
     var rdMasculino = document.getElementById("rdMasculino").checked = false;
     var rdFeminino = document.getElementById("rdFeminino").checked = false;
