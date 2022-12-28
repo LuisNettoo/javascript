@@ -6,7 +6,7 @@ function criarEstrelas() {
     let estrelas = "";
     
     let i = 1;
-    while (i < num) {
+    while (i < num+1) {
         estrelas = estrelas + "*".repeat(i) + "\n"
         i++
     }
