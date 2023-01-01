@@ -1,51 +1,31 @@
-let pacientes = [];
+pacientes = [];
 
-function registrarPaciente() {
-    let inNome = document.getElementById("inNome");
-    let outLista = document.getElementById("outLista");
+function adicionarPaciente() {
+    var inNome = document.getElementById("inNome");
+    var outAtendimento = document.getElementById("inAtendimento");
+    var outLista = document.getElementById("outLista");
 
-    let nome = inNome.value;
+    var nome = inNome.value;
+    
+    if (nome == "") {
+        alert("Digite um número válido...");
+        inNome.focus();
+        return;
+    }
 
     pacientes.push(nome);
-    let lista = ""
+
+    var lista = "";
 
     for (let i = 0; i < pacientes.length; i++) {
         lista += (i + 1) + ". " + pacientes[i] + "\n";
     }
 
     outLista.textContent = lista;
+    
     inNome.value = "";
     inNome.focus();
-
-    console.log(pacientes)
 }
 
-let btAdicionar = document.getElementById("btAdicionar");
-btAdicionar.addEventListener("click", registrarPaciente);
-
-function registrarUrgente() {
-    let inNome = document.getElementById("inNome");
-    let outLista = document.getElementById("outLista");
-    let outAtendimento = document.getElementById("outAtendimento");
-
-    let nome = inNome.value;
-
-    pacientes.unshift(nome);
-    let lista = ""
-    let atender = pacientes.shift();
-    outAtendimento.textContent = atender;
-
-    for (let i = 0; i < pacientes.length; i++) {
-        lista += (i + 1) + ". " + pacientes[i] + "\n";
-    }
-
-    outLista.textContent = lista;
-    inNome.value = "";
-    inNome.focus();
-
-    console.log(pacientes)
-}
-
-
-let btUrgencia = document.getElementById("btUrgencia");
-btUrgencia.addEventListener("click", registrarUrgente);
+var btAdicionar = document.getElementById("btAdicionar");
+btAdicionar.addEventListener("click", adicionarPaciente);
