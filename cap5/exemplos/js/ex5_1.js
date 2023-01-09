@@ -25,7 +25,7 @@ function adicionarPaciente() {
     
     inNome.value = "";
     inNome.focus();
-}
+} 
 
 var btAdicionar = document.getElementById("btAdicionar");
 btAdicionar.addEventListener("click", adicionarPaciente);
