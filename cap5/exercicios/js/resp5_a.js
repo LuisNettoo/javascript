@@ -15,7 +15,7 @@ const adicionarClube = () => {
         return;
     };
 
-    clubes.push(clube);
+    clubes.push(clube.trim());
 
     inClube.value = "";
     inClube.focus();
@@ -33,10 +33,11 @@ const listarClubes = () => {
     let lista = "";
 
     for (let i = 0; i < clubes.length; i++) {
-        lista += `${(i + 1)}. ${clubes[i]} \n`;
+        lista += `${(i + 1)}. ${clubes[i]}\n`;
     };
 
     outLista.textContent = lista;
+    outLista.classList.remove("center");
 };
 
 const montarJogos = () => {
@@ -53,6 +54,7 @@ const montarJogos = () => {
     };
 
     outLista.textContent = jogos;
+    outLista.classList.add("center");
 };
 
 btAdicionar.addEventListener("click", adicionarClube);
