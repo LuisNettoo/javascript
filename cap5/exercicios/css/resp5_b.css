@@ -9,70 +9,52 @@
 
 body {
     display: flex;
-    min-height: 100vh;
-    min-width: 100vw;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     background-color: #383838;
+    height: 100vh;
+    width: 100vw;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    gap: 15px;
+    background-color: #fff;
     border-radius: 15px;
-    padding: 30px;
-    min-height: 500px;
-    max-width: 100%;
+    padding: 25px;
 }
 
-.club__add {
+main h1 {
+    font-size: 1.5em;
+}
+
+.add__number {
     display: flex;
-    align-items: center;
     gap: 5px;
-    margin: 10px 0px;
-    max-width: 100%;
+    align-items: center;
 }
 
-.club__add input {
-    outline: none;
+.add__number input {
     border-radius: 5px;
+    outline: none;
     padding: 5px;
     border: none;
     background-color: #F0F0F0;
-    font-size: 0.9rem;
 }
 
-.club__add input:focus {
+.add__number input:focus {
     background-color: #e0e0e0;
-} 
-
-.buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
-.button {
-    padding: 5px;
+.button button, .add__number button {
+    width: 100%;
+    padding: 0.4rem;
     border: none;
     border-radius: 5px;
-    font-size: 0.9rem;
     cursor: pointer;
-    max-width: 100%;
 }
 
-.button:hover {
-    transform: scale(1.03);
+.button button:hover, .add__number button:hover {
     background-color: #e0e0e0;
-}
-
-.club__list {
-    margin: 15px 0px;
-}
-
-.center {
-    display: flex;
-    justify-content: center;
-    text-align: center;
 }
