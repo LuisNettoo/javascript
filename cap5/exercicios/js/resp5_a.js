@@ -41,6 +41,12 @@ const listarClubes = () => {
 };
 
 const montarJogos = () => {
+    if (clubes.length == 0) {
+        alert("Não há clubes na lista!")
+        inClube.focus();
+        return;
+    };
+
     if (clubes.length % 2 != 0) {
         alert("Precisa ter um número par de clubes para fazer um campeonato!");
         inClube.focus();
