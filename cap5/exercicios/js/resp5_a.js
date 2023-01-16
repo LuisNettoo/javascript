@@ -19,7 +19,7 @@ const adicionarClube = () => {
 
     inClube.value = "";
     inClube.focus();
-    console.log(clubes);
+    
     listarClubes();
 };
 

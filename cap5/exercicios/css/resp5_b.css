@@ -10,6 +10,7 @@
 body {
     display: flex;
     min-height: 100vh;
+    min-width: 100vw;
     align-items: center;
     justify-content: center;
     background-color: #383838;
@@ -22,6 +23,7 @@ main {
     border-radius: 15px;
     padding: 30px;
     min-height: 500px;
+    max-width: 100%;
 }
 
 .club__add {
@@ -29,6 +31,7 @@ main {
     align-items: center;
     gap: 5px;
     margin: 10px 0px;
+    max-width: 100%;
 }
 
 .club__add input {
@@ -56,6 +59,7 @@ main {
     border-radius: 5px;
     font-size: 0.9rem;
     cursor: pointer;
+    max-width: 100%;
 }
 
 .button:hover {
