@@ -60,3 +60,8 @@ body {
     transform: scale(1.02);
     background-color: #e8e8e8;
 }
+
+.new__title {
+    font-style: italic;
+    color: blue;
+}
