@@ -40,9 +40,12 @@ const calcularMultaJuros = () => {
 
     const total = valor + multa + juros;
 
-    outMulta.textContent = multa.toFixed(2);
-    outJuros.textContent = juros.toFixed(2);
-    outTotal.textContent = total.toFixed(2);
+    outMulta.value = multa.toFixed(2);
+    outJuros.value = juros.toFixed(2);
+    outTotal.value = total.toFixed(2);
 };
 
 btCalcular.addEventListener("click", calcularMultaJuros);
+btNovaConta.addEventListener("click", () => {
+    location.reload();
+});
