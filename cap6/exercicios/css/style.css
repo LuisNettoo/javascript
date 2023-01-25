@@ -22,7 +22,7 @@ main {
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
-    min-height: 250px;
+    min-height: fit-content;
 }
 
 .inputs input {
@@ -44,7 +44,7 @@ main {
 }
 
 .buttons button {
-    width: 50%;
+    width: 100%;
     padding: 8px;
     border: none;
     border-radius: 5px;
