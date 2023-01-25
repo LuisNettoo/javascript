@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6.d</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .buttons button {
+            width: 100%;
+        }
+
+        .inputs input[type="text"] {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="inputs">
+            <label for="inData">Data da Infração</label>
+            <input type="date" name="data" id="inData">
+        </div>
+        <div class="inputs">
+            <label for="inMulta">Valor da Multa R$</label>
+            <input type="text" name="multa" id="inMulta">
+        </div>
+        <div class="buttons">
+            <button id="btCalcular">Calcular Data Limite e Valor com Desconto</button>
+        </div>
+        <div class="outputs">
+            <h3>Data Limite para Pagar <br>com Desconto: <span id="outData"></span></h3>
+            <h3>Valor com Desconto R$: <span id="outMulta"></span></h3>
+        </div>
+    </main>
+</body>
+</html>
