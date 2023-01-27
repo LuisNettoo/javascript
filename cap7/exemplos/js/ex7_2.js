@@ -1,5 +1,5 @@
 const calularMedia = () => {
-    if (arguments.length === 0) {
+    if (arguments.length == 0) {
         alert("Digite no minimo uma nota");
         return;
     };
@@ -15,4 +15,6 @@ const calularMedia = () => {
     alert(`Média das Notas: ${media.toFixed(1)}`);
 };
 
-calularMedia(6, 6, 9);
+calularMedia(6, 8);
+calularMedia(6, 8, 10);
+calularMedia(6, 8, 7, 5);
