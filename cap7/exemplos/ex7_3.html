@@ -5,6 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo 7.3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -19,7 +34,7 @@
         </div>
         <div>
             <label for="inPreco">Preço Propietario R$:</label>
-            <input type="text" name="modelo" id="inModelo">
+            <input type="text" name="preco" id="inPreco">
         </div>
         <div>
             <button id="btCalcular">Classificar/Calcular Preço</button>
