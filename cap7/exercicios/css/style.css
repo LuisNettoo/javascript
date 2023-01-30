@@ -58,3 +58,17 @@ main {
 .action__button button:hover {
     background-color: #eee;
 }
+
+.input__select {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ocultar {
+    display: none;
+}
+
+.mostrar {
+    display: flex;
+}

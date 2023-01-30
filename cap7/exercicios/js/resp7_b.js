@@ -64,3 +64,5 @@ const gerarSenha = () => {
 };
 
 btGerar.addEventListener("click", gerarSenha);
+
+export default gerarSenha;

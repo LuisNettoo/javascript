@@ -5,10 +5,45 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exercício 7.c</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .input__radio {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    select {
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <main>
     <h1>Veterinária Avenida</h1>
+    <div class="input__info">
+      <label for="inValor">Valor da Vacina:</label>
+      <input type="text" name="valor" id="inValor" style="text-align: right;">
+    </div>
+    <div class="input__radio">
+      Possui Convênio:
+      <input type="radio" name="possui" id="rbSim">Sim
+      <input type="radio" name="possui" id="rbNao" checked>Não
+    </div>
+    <div class="input__select ocultar" id="inSelect">
+      <label for="inConvenio">Convênio: </label>
+      <select name="convenio" id="inConvenio">
+        <option value="amigos">Amigos dos Animais</option>
+        <option value="saude">Saúde Animal</option>
+      </select>
+    </div>
+    <div class="action__button">
+      <button id="btCalcular">Calcular Desconto</button>
+    </div>
+    <div class="output__info">
+      <h3>Desconto R$: <span id="outDesconto"></span></h3>
+      <h4>Total a Pagar R$: <span id="outPagar"></span></h4>
+    </div>
   </main>
 
   <script src="js/resp7_c.js"></script>
