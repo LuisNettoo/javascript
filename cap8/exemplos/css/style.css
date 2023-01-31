@@ -1,0 +1,26 @@
+.oculta {
+  display: none;
+}
+
+.exibe {
+  display: inline;
+}
+
+.coresFlamengo {
+  color: #000;
+  background-color: #ff0000;
+}
+
+.coresSampaio {
+  color: #00d300;
+  background-color: #ffff00;
+}
+
+.coresSantos {
+  color: #000;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
