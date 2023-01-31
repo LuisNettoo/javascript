@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Exemplo 8.3</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8">
+          <h1>Qual o peso da Melancia?</h1>
+          <p>
+            <label for="inNome">Nome do Apostador: </label>
+            <input
+              type="text"
+              name="nome"
+              id="inNome"
+              class="form-control"
+              autofocus autocomplete="off"
+            />
+          </p>
+          <p>
+            <label for="inPeso">Peso (em gramas): </label>
+            <input type="text" name="peso" id="inPeso" class="form-control" />
+          </p>
+          <p>
+            <button id="btApostar" class="btn btn-primary">Apostar</button>
+            <button id="btVencedor" class="btn btn-warning">Vecendor</button>
+            <button id="btLimpar" class="btn btn-danger">Limpar Apostas</button>
+          </p>
+          <p>
+            <pre id="outApostas"></pre>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/ex8_3.js"></script>
+  </body>
+</html>
