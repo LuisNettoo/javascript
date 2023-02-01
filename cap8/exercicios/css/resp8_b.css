@@ -79,3 +79,25 @@ main .button__form {
 main .output__form {
     margin: 10px 0;
 }
+
+.output__form h3:first-child {
+    text-align: right;
+    margin: 5px 0;
+}
+
+.output__form span {
+    color: #ff0000;
+}
+
+.output__form p {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 3px 5px;
+    font-size: 0.9rem;
+}
+
+.output__form h3:last-child {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
