@@ -4,6 +4,21 @@ const btExecutar = document.querySelector("#btExecutar");
 const outPendente = document.querySelector("#outPendente");
 const outServico = document.querySelector("#outServico");
 
+const adicionarLocalStorage = (nome) => {
+  if (!localStorage.getItem("listaServicos")) {
+    localStorage.setItem("listaServicos", nome);
+  } else {
+    let novoServico = localStorage.getItem("listaServicos");
+    novoServico += ";" + nome;
+    localStorage.setItem("listaServicos", novoServico);
+  }
+};
+
+const transformarLista = (key) => {
+  const array = localStorage.getItem(`${key}`).split(";");
+  return array;
+};
+
 const adicionarServico = () => {
   const nomeServico = inServico.value;
 
@@ -13,14 +28,7 @@ const adicionarServico = () => {
     return;
   }
 
-  if (!localStorage.getItem("listaServicos")) {
-    localStorage.setItem("listaServicos", nomeServico);
-  } else {
-    let novoServico = localStorage.getItem("listaServicos");
-    novoServico += ";" + nomeServico;
-    localStorage.setItem("listaServicos", novoServico);
-  }
-
+  adicionarLocalStorage(nomeServico);
   mostrarServico();
 
   inServico.value = "";
@@ -29,45 +37,31 @@ const adicionarServico = () => {
 
 const mostrarServico = () => {
   if (localStorage.getItem("listaServicos")) {
-    const servicos = localStorage.getItem("listaServicos").split(";");
+    const servicos = transformarLista("listaServicos");
     outServico.textContent = servicos[0];
     outPendente.textContent = servicos.length - 1;
-    console.log(servicos);
   }
 };
 
 const executarServico = () => {
   if (localStorage.getItem("listaServicos")) {
-    const servicos = localStorage.getItem("listaServicos").split(";");
+    const servicos = transformarLista("listaServicos");
     servicos.shift();
 
     outServico.textContent = servicos[0];
 
+    localStorage.setItem("listaServicos", servicos.join(";"));
+
     if (servicos.length > 0) {
       outPendente.textContent = servicos.length - 1;
     } else {
+      outServico.textContent = "Nenhum";
       outPendente.textContent = 0;
-    }
-
-    let novaLista = "";
-
-    for (let i = 0; i < servicos.length; i++) {
-      if (servicos.length > 1) {
-        novaLista += servicos[i] + ";";
-      } else if (servicos.length == 1) {
-        novaLista += servicos[i];
-      }
-    }
-
-    console.log(servicos);
-    if (servicos.length > 0) {
-      localStorage.setItem("listaServicos", novaLista);
-    } else {
-      localStorage.removeItem("listaServicos");
     }
   }
 };
 
+executarServico();
 mostrarServico();
 
 btAdicionar.addEventListener("click", adicionarServico);
