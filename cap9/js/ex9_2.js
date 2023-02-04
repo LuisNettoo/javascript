@@ -77,5 +77,9 @@ const conferirSoma = () => {
   btConferir.disabled = true;
 };
 
-btExibir.addEventListener("click", adicionarMoedas);
+adicionarMoedas();
+
+btExibir.addEventListener("click", () => {
+  location.reload();
+});
 btConferir.addEventListener("click", conferirSoma);
