@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 9.c</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8">
+          <h1>Copa do Brasil - Classificados</h1>
+          <p>
+            <label for="inClube">Clube:</label>
+            <input type="text" class="form-control" id="inClube" />
+          </p>
+          <p>
+            <button class="btn btn-primary" id="btAdicionar">Adicionar</button>
+            <button class="btn-btn-sucess" id="btMostrar">
+              Mostrar Tabela de Jogos
+            </button>
+            <button class="btn btn-danger" id="btNovos">Novos Clubes</button>
+          </p>
+          <p id="outClubes"></p>
+          <p id="outTabela">
+            <h2>Tabela de Jogos</h2>
+            <table id="tbJogos"></table>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/resp9_c.js"></script>
+  </body>
+</html>
