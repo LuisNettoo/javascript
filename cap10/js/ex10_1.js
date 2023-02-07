@@ -7,6 +7,16 @@ const CAVALOS = ["Marujo", "Tordilho", "Belga", "Twister", "Jade", "Lucky"];
 
 const apostas = [];
 
+const validarCavalo = (num) => {
+  const tamanho = CAVALOS.length;
+
+  if (num >= 1 && num <= tamanho) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 const adicionarAposta = () => {
   const valor = Number(inValor.value);
   const cavalo = Number(inCavalo.value);
